@@ -37,9 +37,8 @@ paper-search/
 │   └── report.md               # Report template: survey structure, per-paper summary, credibility labels
 ├── scripts/
 │   └── pdf_images.py           # PDF figure extraction script
-├── evals/
-│   └── evals.json              # Evaluation test cases
-└── workspace/                  # Iteration benchmark records
+└── evals/
+    └── evals.json              # Evaluation test cases
 ```
 
 Design principles:
