@@ -16,28 +16,28 @@ npx skills add https://github.com/Eso-by/paper-search --skill paper-search
 - Two workflows: **Full Search** (4-phase pipeline from scratch with iterative 3+ round search, progressive reporting, and graceful failure handling with DOI tracking) and **Local Q&A** (answer specific questions from an existing paper folder with full-text reading, not abstract skimming)
 - Every full-text summary includes concrete formulas, parameter conditions, and methodological steps — abstract-only content is explicitly labeled "needs verification"
 
-## Why This Exists
+## Motivation
 
-当前市面上的科研 Agent 自由度不高，自动化水平低。大多数工具只能做到"关键词搜索 → 返回列表"这一步，后续的 PDF 获取、全文阅读、公式提取、文献综述撰写仍然依赖人工完成。即使是基于 LLM 的学术助手，也往往停留在摘要层面的浅层总结，无法深入论文全文提取具体的公式、参数条件和方法细节。
+Most academic research agents today have limited autonomy and low automation. They can handle "keyword search → return list", but everything after that — PDF acquisition, full-text reading, formula extraction, survey writing — still depends on manual work. Even LLM-based academic assistants tend to stay at the abstract level, unable to dive into the full text to extract specific formulas, parameter conditions, and methodological details.
 
-paper-search 将"搜索 → 下载 → 阅读 → 综述"整条链路自动化，由 Claude Code 作为执行引擎，在每个环节做出判断（期刊质量筛选、下载渠道选择、参考文献追踪），最终交付的不是一堆链接，而是一篇有叙事结构、标注可信度的文献综述报告。
+paper-search automates the entire chain: search → download → read → survey. Claude Code acts as the execution engine, making judgment calls at each step (journal quality filtering, download channel selection, reference tracing). The final deliverable is not a pile of links, but a structured narrative survey report with credibility labels.
 
 ## Architecture
 
 ```
 paper-search/
-├── SKILL.md                    # Skill 主定义文件（Claude Code 入口）
-├── pdf_extract.py              # PDF 文本/表格提取工具
-├── references/                 # 各阶段详细指令（按需加载）
-│   ├── search.md               # 搜索策略：关键词变体、3+ 轮穷尽、GS CDP
-│   ├── download.md             # 下载策略：渠道优先级、验证、重试、失败通知格式
-│   ├── reading.md              # 阅读策略：pymupdf 全文提取、表格/图片处理
-│   └── report.md               # 报告模板：综述结构、单篇总结格式、可信度标注
+├── SKILL.md                    # Skill definition (Claude Code entry point)
+├── pdf_extract.py              # PDF text/table extraction utility
+├── references/                 # Per-stage instructions (loaded on demand)
+│   ├── search.md               # Search strategy: keyword variants, 3+ round exhaustive, GS CDP
+│   ├── download.md             # Download strategy: channel priority, verification, retry, failure format
+│   ├── reading.md              # Reading strategy: pymupdf full-text, table/figure extraction
+│   └── report.md               # Report template: survey structure, per-paper summary, credibility labels
 ├── scripts/
-│   └── pdf_images.py           # PDF 图片提取脚本
+│   └── pdf_images.py           # PDF figure extraction script
 ├── evals/
-│   └── evals.json              # 评测用例定义
-└── workspace/                  # 迭代评测记录
+│   └── evals.json              # Evaluation test cases
+└── workspace/                  # Iteration benchmark records
 ```
 
 Design principles:
