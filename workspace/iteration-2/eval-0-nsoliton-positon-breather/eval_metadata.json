@@ -1,0 +1,15 @@
+{
+  "eval_id": 0,
+  "eval_name": "n-soliton-to-breather-methodology",
+  "prompt": "之前搜索过positom-mkdv文件夹（路径：C:\\Users\\porfi\\Desktop\\工作文档\\Lax\\改稿子\\papers\\positon-mkdv\\），现在我对这条技术路线特别感兴趣：从n孤子解出发，通过谱参数退化（特征值凝聚）得到光滑positon，再进一步通过模共振或双重退化得到呼吸子和退化呼吸子。请在我的positon-mkdv文件夹中找出讨论这条完整技术链的论文，重点提取：(1) 哪些论文用了Darboux变换的退化极限，(2) 哪些用了Hirota双线性方法，(3) 哪些做了breather-positon（b-positon）和退化呼吸子。同时，对于你找到的每一篇核心论文（特别是He 2017、Xing 2017、Zhang 2020、Zhang 2021），查阅其参考文献列表，追踪其中引用的关于退化方法和呼吸子-positon的关键文献，标注哪些已在文件夹中、哪些值得进一步获取。输出格式为分类总结+每篇论文的具体方法描述。",
+  "assertions": [
+    "输出按 Darboux 变换退化方法、Hirota 双线性方法、b-positon/退化呼吸子三大类进行分类总结",
+    "正确指出 He 2017 使用了 n 重 Darboux 变换的谱参数退化极限（λ_j→λ_1）构造 smooth positon",
+    "正确指出 Zhang 2021 使用了 Hirota 双线性方法的极限过程构造高阶 positon",
+    "引用追溯被执行：至少从一篇核心论文的参考文献中提取了关键文献并标注其在/不在文件夹中",
+    "覆盖了 Zhang 2020 b-positon 的模共振机制（λ = -λ*）",
+    "覆盖了 Xing 2017 的双重退化链（周期解→b-positon→有理解）",
+    "每篇论文的总结包含方程形式、核心方法、主要结果三要素",
+    "识别出至少 5 篇与 n孤子→positon→呼吸子技术链直接相关的论文"
+  ]
+}

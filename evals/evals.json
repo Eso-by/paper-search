@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-search",
+  "evals": [
+    {
+      "id": 1,
+      "name": "变系数 mKdV 搜索 - 精确匹配已有目录测试",
+      "prompt": "之前搜索过一次positon-mkdv，现在在此基础上进一步扩大范围搜索变系数的mkdv，不要高维和复数的",
+      "expected_output": "· 展示搜索计划时包含多轮搜索策略（≥40篇目标、至少3轮）\n· 下载失败时（如非%PDF或截断）展示重试机制\n· 核心论文下载失败时暂停流程并请求用户帮助\n· 逐篇总结按照'方程形式+核心方法+主要结果+特别之处'四要素组织\n· 阅读报告中注明搜索轮次信息",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "Gardner 方程综述 - 全面覆盖测试",
+      "prompt": "搜索关于 Gardner 方程 positon 解的相关论文，重点关注非线性动力学和孤立子理论方向",
+      "expected_output": "· 展示搜索计划，关键词至少包含 Gardner equation, positon, breather 等变体\n· 搜索至少进行多轮\n· 阅读时对每篇全文论文展示方程形式、方法、结果和创新点\n· 如果核心论文无法下载，即时请求用户帮助",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "现有论文增量更新 - 迭代增强测试",
+      "prompt": "之前已经搜索过vc-mkdv，现在要更新搜索，看看2025-2026有没有新的变系数mKdV论文",
+      "expected_output": "· 先检查已有论文文件夹中的PDF\n· 检查已有论文是否有更新版本（arXiv→正式发表）\n· 使用新的年份范围做增量搜索\n· 记录本次迭代新增论文数量",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "n孤子→positon→呼吸子/退化呼吸子方法分类提取",
+      "prompt": "之前搜索过positon-mkdv文件夹（路径：C:\\Users\\porfi\\Desktop\\工作文档\\Lax\\改稿子\\papers\\positon-mkdv\\），现在我对这条技术路线特别感兴趣：从n孤子解出发，通过谱参数退化（特征值凝聚）得到光滑positon，再进一步通过模共振或双重退化得到呼吸子和退化呼吸子。请在我的positon-mkdv文件夹中找出讨论这条完整技术链的论文，重点提取：(1) 哪些论文用了Darboux变换的退化极限，(2) 哪些用了Hirota双线性方法，(3) 哪些做了breather-positon（b-positon）和退化呼吸子。同时，对于你找到的每一篇核心论文（特别是He 2017、Xing 2017、Zhang 2020、Zhang 2021），查阅其参考文献列表，追踪其中引用的关于退化方法和呼吸子-positon的关键文献，标注哪些已在文件夹中、哪些值得进一步获取。输出格式为分类总结+每篇论文的具体方法描述。",
+      "expected_output": "· 展示搜索计划（包含reference chasing策略）\n· 在positom-mkdv文件夹中正确阅读PDF并提取方法信息\n· 按照Darboux退化、Hirota双线性、b-positon三大方法分类输出\n· 从核心论文参考文献中追溯关键文献并标注状态\n· 每篇论文按照'方程形式+核心方法+主要结果+特别之处'总结",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "退化呼吸子文献搜索与引用链追踪",
+      "prompt": "我在positon-mkdv文件夹（路径：C:\\Users\\porfi\\Desktop\\工作文档\\Lax\\改稿子\\papers\\positon-mkdv\\）中有20多篇PDF，但我知道关于mKdV的'退化呼吸子'方法可能还有一些关键论文没找到。请从以下几个方向搜索：(1) double degeneration方法在mKdV上的应用（类似Wang-He 2017在NLS上的双重退化），(2) degenerate breather / degenerate Darboux transformation在mKdV中的最新工作，(3) 2025-2026年是否有关于mKdV退化呼吸子的新论文。核心搜索策略：先阅读positon-mkdv中最相关的3-5篇PDF的参考文献部分，从中提取你还未收录的关键论文（注意检查作者如He J.S.、Zhang Zhao、Wang Lihong、Porsezian K.等团队的引用网络），然后针对性地搜索这些论文。搜索时重点看arXiv、Nonlinear Dynamics、Physica D、Studies in Applied Mathematics。如果找到新论文，请与已有positon-mkdv目录对比，标出新增的。",
+      "expected_output": "· 先阅读现有PDF参考文献列表提取引用链（demonstrate chasing参考文献）\n· 搜索至少3轮，覆盖double degeneration、degenerate breather等关键词\n· 对比已有目录，明确标出新增论文\n· 新增论文展示标题、作者、来源和搜索渠道",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "方法论综述大纲与引用网络分析",
+      "prompt": "请帮我写一份关于mKdV方程中'从孤子经positon到呼吸子'方法论的文献综述大纲。我的文献在C:\\Users\\porfi\\Desktop\\工作文档\\Lax\\改稿子\\papers\\positon-mkdv\\。需要先阅读positon-mkdv文件夹中的核心PDF（特别是He 2017 smooth positon、Zhang 2020 b-positon、Zhang 2021 Hirota positon、Xing 2017双重退化），提取每条技术路线的关键步骤，按'n孤子解→positon→呼吸子/退化呼吸子'这条主线组织。在阅读每篇核心论文时，记录其参考文献中涉及退化方法、breather-positon、双重退化等方向的关键文献，形成一个'引用网络图'——标注哪些已在收集中，哪些需要补搜。然后搜索是否有补充文献。输出：方法论路线图（500-800字）+分类表格（方法名称、关键步骤、最早出处、在mKdV上的代表性工作）+引用网络分析。",
+      "expected_output": "· 阅读核心PDF（He 2017, Zhang 2020, Zhang 2021, Xing 2017）并提取关键方法\n· 方法论路线图按'n孤子→positon→呼吸子/退化呼吸子'主线组织\n· 包含分类表格（方法名称、关键步骤、最早出处、代表性工作）\n· 包含引用网络分析（标注已收录/需补搜状态）\n· 搜索补充文献并整合进大纲",
+      "files": []
+    }
+  ]
+}

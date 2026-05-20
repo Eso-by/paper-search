@@ -1,0 +1,16 @@
+{
+  "eval_id": 2,
+  "eval_name": "methodology-review-outline",
+  "prompt": "请帮我写一份关于mKdV方程中'从孤子经positon到呼吸子'方法论的文献综述大纲。我的文献在C:\\Users\\porfi\\Desktop\\工作文档\\Lax\\改稿子\\papers\\positon-mkdv\\。需要先阅读positon-mkdv文件夹中的核心PDF（特别是He 2017 smooth positon、Zhang 2020 b-positon、Zhang 2021 Hirota positon、Xing 2017双重退化），提取每条技术路线的关键步骤，按'n孤子解→positon→呼吸子/退化呼吸子'这条主线组织。在阅读每篇核心论文时，记录其参考文献中涉及退化方法、breather-positon、双重退化等方向的关键文献，形成一个'引用网络图'——标注哪些已在收集中，哪些需要补搜。然后搜索是否有补充文献。输出：方法论路线图（500-800字）+分类表格（方法名称、关键步骤、最早出处、在mKdV上的代表性工作）+引用网络分析。",
+  "assertions": [
+    "读了 He 2017 smooth positon 论文并提取了其方法关键步骤",
+    "读了 Zhang 2020 b-positon（或 Novel soliton molecules and breather-positon）论文",
+    "读了 Zhang 2021 Hirota positon 论文",
+    "读了 Xing 2017 双重退化论文",
+    "方法论路线图按 'n孤子解→positon→呼吸子/退化呼吸子' 主线组织",
+    "包含分类表格（含方法名称、关键步骤、最早出处、mKdV 代表性工作）",
+    "包含引用网络分析（标注了已收录/需补搜的不同状态）",
+    "输出总长度超过 800 字（方法论路线图+表格+引用网络的合计）",
+    "搜索了补充文献并整合进大纲"
+  ]
+}

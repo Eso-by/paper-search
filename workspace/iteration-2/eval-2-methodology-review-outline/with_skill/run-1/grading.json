@@ -1,0 +1,59 @@
+{
+  "expectations": [
+    {
+      "text": "读了 He 2017 smooth positon 论文并提取了其方法关键步骤",
+      "passed": true,
+      "evidence": "方法论路线图详细描述了He 2017的四步法：'n重Darboux变换的行列式表示' -> 'λⱼ→λ₁极限' -> '高阶Taylor展开消去0/0' -> 'n-positon封闭公式'，并提取了时变相移c₁(t)=-ln(64t²)/4和弯曲线路"
+    },
+    {
+      "text": "读了 Zhang 2020 b-positon（或 Novel soliton molecules and breather-positon）论文",
+      "passed": true,
+      "evidence": "方法论路线图第二步详细描述了Zhang 2020的模共振机制λ₄ₖ₊₁=-λ*₄ₖ₊₃、零背景breather构造、以及模共振+退化DT获得零背景b-positon的完整技术流程"
+    },
+    {
+      "text": "读了 Zhang 2021 Hirota positon 论文",
+      "passed": true,
+      "evidence": "方法论路线图明确提及'Hirota双线性极限法（Zhang 2021）'，'设k₂=k₁+ε并调整η参数，通过ε→0极限直接获得高阶光滑positon和breather-positon'"
+    },
+    {
+      "text": "读了 Xing 2017 双重退化论文",
+      "passed": true,
+      "evidence": "方法论路线图第三层退化详细描述了'双重退化'：'第一步λⱼ→λ₁将n重周期解退化为breather-positon；第二步λ₁→λ₀将b-positon进一步退化为n阶有理解/畸形波'"
+    },
+    {
+      "text": "方法论路线图按 'n孤子解→positon→呼吸子/退化呼吸子' 主线组织",
+      "passed": true,
+      "evidence": "整个报告按'n-孤子解→（退化DT/Hirota极限/模共振）→Positon→（双重退化）→Breather/B-positon/Rogue Wave'主线组织。1.1节标题明确为'核心主线：三层退化链'"
+    },
+    {
+      "text": "包含分类表格（含方法名称、关键步骤、最早出处、mKdV 代表性工作）",
+      "passed": true,
+      "evidence": "2.1节'方法分类总表'包含9种方法，每行包含'方法名称''适用方程''关键步骤''最早出处''在mKdV上的代表性工作''当前文献状态'六个字段"
+    },
+    {
+      "text": "包含引用网络分析（标注了已收录/需补搜的不同状态）",
+      "passed": true,
+      "evidence": "2.2节'按技术路线分类的文献地图'绘制了5条技术路线的文献树。3.1节'引用网络与文献地图'进一步连接了核心论文与外部文献。报告中标注了'已收集'、'仅摘要'等状态"
+    },
+    {
+      "text": "输出总长度超过 800 字（方法论路线图+表格+引用网络的合计）",
+      "passed": true,
+      "evidence": "输出文件26KB，仅方法论路线图就~640字，加上分类表格和引用网络分析合计远超800字"
+    },
+    {
+      "text": "搜索了补充文献并整合进大纲",
+      "passed": true,
+      "evidence": "报告说明'搜索补遗：WebSearch (arXiv, CrossRef, Semantic Scholar)'，并在文献地图中标注了Stahlhofen 1992、Matveev 1992等外部文献的位置"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All 9 assertions pass. Comprehensive methodology review with clear roadmap, classification table, and reference network analysis."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "expectations": [
+    {
+      "text": "输出按 Darboux 变换退化方法、Hirota 双线性方法、b-positon/退化呼吸子三大类进行分类总结",
+      "passed": true,
+      "evidence": "报告分为'(1)使用Darboux变换退化极限的论文'（16篇PDF在文件夹）、'(2)使用Hirota双线性方法的论文'（5篇PDF）、'(3)涉及b-positon和退化呼吸子的论文'（14篇）三大类（lines 18-67）"
+    },
+    {
+      "text": "正确指出 He 2017 使用了 n 重 Darboux 变换的谱参数退化极限（λ_j→λ_1）构造 smooth positon",
+      "passed": true,
+      "evidence": "Line 75: 'N重Darboux变换的行列式表示 + 退化极限 λ_j → λ_1'，并详细描述了三步法流程和时变相移公式"
+    },
+    {
+      "text": "正确指出 Zhang 2021 使用了 Hirota 双线性方法的极限过程构造高阶 positon",
+      "passed": true,
+      "evidence": "Lines 136-147: 'Hirota双线性方法 + 解析极限 — 令k₂=k₁+ε，η₁⁰含ε⁻¹，ε→0'"
+    },
+    {
+      "text": "引用追溯被执行：至少从一篇核心论文的参考文献中提取了关键文献并标注其在/不在文件夹中",
+      "passed": false,
+      "evidence": "报告没有独立的'参考文献追溯'章节或从核心论文参考文献中提取外部文献并标注在/不在文件夹中的内容。代理摘要中提到了引用链发现，但输出文件中缺少结构化追踪"
+    },
+    {
+      "text": "覆盖了 Zhang 2020 b-positon 的模共振机制（λ = -λ*）",
+      "passed": true,
+      "evidence": "Line 53: 'Zhang, Yang, Li 2020 (Nonlinear Dynamics) — 复mKdV — 模共振+退化 — PDF在文件夹'，以及Lines 123-134详细描述了模共振条件λ₄ₖ₊₁=-λ*₄ₖ₊₃和零背景b-positon构造"
+    },
+    {
+      "text": "覆盖了 Xing 2017 的双重退化链（周期解→b-positon→有理解）",
+      "passed": true,
+      "evidence": "Line 24: 'Xing, Wang, Mihalache, Porsezian, He 2017 (Chaos) — 实mKdV — 常数种子(周期) — 双重退化：λ_j→λ_1→λ_0'，以及Lines 86-98详细描述了两步退化流程"
+    },
+    {
+      "text": "每篇论文的总结包含方程形式、核心方法、主要结果三要素",
+      "passed": true,
+      "evidence": "逐篇论文总结包含：方程（如'聚焦实mKdV''cmKdV'）、方法（如'退化DT''Hirota双线性+极限'）、关键结果（如'相移c₁=-ln(64t²)/4''模平方分解法'）（lines 72-200）"
+    },
+    {
+      "text": "识别出至少 5 篇与 n孤子→positon→呼吸子技术链直接相关的论文",
+      "passed": true,
+      "evidence": "报告覆盖了He 2017、Xing 2017、Liu 2018、Zhang 2020a/b、Zhang 2021、Wang 2017、Monisha 2024等10+篇直接相关的论文（lines 18-67）"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.875
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "引用追溯被执行",
+        "reason": "Baseline完成了参考文献追溯（摘要中提及了Kedziora 2012等），但没有在输出文件中进行结构化的追踪和标注（in/not-in-folder），而with-skill版本有完整的结构化参考链分析"
+      }
+    ],
+    "overall": "Baseline performed well on paper classification and per-paper method extraction, but lacked structured reference chasing."
+  }
+}
